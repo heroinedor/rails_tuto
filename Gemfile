@@ -24,9 +24,11 @@ gem "puma", "5.6.4"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", "1.12.0", require: false
 
+gem "pg", "1.3.5"
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem "sqlite3", "1.4.2"
+  # gem "pg", "1.3.5"
   # See https://guides.rubyonrails.org/
   # debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", "1.5.0", platforms: %i[ mri mingw x64_mingw ]
@@ -53,7 +55,7 @@ group :test do
 end
 
 group :production do
-  gem "pg", "1.3.5"
+  # gem "pg", "1.3.5"
 end
 
 # Use Redis adapter to run Action Cable in production
